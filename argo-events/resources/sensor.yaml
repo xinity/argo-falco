@@ -15,7 +15,6 @@ spec:
           - path: body.rule
             type: string
             value:
-              - "Terminal shell in container"
               - "COOKIE tampering detector"
   triggers:
     - template:
