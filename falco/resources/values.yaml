@@ -24,7 +24,7 @@ falco:
           priority: EMERGENCY
           tags: [importantrecipesalert]
         - rule: Execution from /dev/shm
-          desc: This rule detects file execution from the /dev/shm directory, a common location for threat actors to stash their readable + writable + (sometimes) executable files.
+          desc: This rule detects file execution UPDATE SIGMA DEMO ARGOCD SIGMA SIGMA SIGMA from the /dev/shm directory, a common location for threat actors to stash their readable + writable + (sometimes) executable files.
           condition: evt.type=execve and evt.dir=< and ((proc.exe startswith '/dev/shm' or (proc.cwd startswith /dev/shm and proc.exe startswith ./ )) or (proc.name in (ash,zsh,bash,sh,fish) and proc.args contains "/dev/shm"))
           output: "File execution detected from /dev/shm (proc.cmdline=%proc.cmdline image=%container.image.repository)"
           priority: CRITICAL
