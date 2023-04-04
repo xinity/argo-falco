@@ -18,9 +18,9 @@ spec:
       - name: driver.kind
         value: ebpf
       - name: falcosidekick.enabled
-        value: true
+        value: "true"
       - name: falcosidekick.webui.enabled
-        value: true
+        value: "true"
     path: falco/resources
     repoURL: https://github.com/xinity/argo-falco.git
     targetRevision: master
