@@ -23,3 +23,9 @@ falco:
           output: Cookie recipes tampering detected, secure your cookies,(uid=%user.uid container_id=%container.id container_name=%container.name image=%container.image.repository:%container.image.tag %evt.arg.oldpath)
           priority: EMERGENCY
           tags: [importantrecipesalert]
+driver:
+  enabled: true
+  kind: ebpf
+  ebpf:
+    hostNetwork: true
+    leastPrivileged: true
